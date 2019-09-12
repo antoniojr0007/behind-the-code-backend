@@ -1,5 +1,3 @@
-'use strict'
-
 /*
 |--------------------------------------------------------------------------
 | Factory
@@ -19,7 +17,7 @@ Factory.blueprint('App/Models/User', (faker, i, data = {}) => {
     name: faker.name(),
     email: faker.email(),
     password: faker.string(),
-    ...data
+    ...data,
   };
 });
 
@@ -27,6 +25,6 @@ Factory.blueprint('App/Models/Token', async (faker, i, data = {}) => {
   return {
     type: data.type || 'refreshtoken',
     token: faker.string({ length: 20 }),
-    ...data
+    ...data,
   };
 });
