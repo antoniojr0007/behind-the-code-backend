@@ -7,8 +7,9 @@ const Factory = use('Factory');
 const User = use('App/Models/User');
 
 trait('Test/ApiClient');
+trait('DatabaseTransactions');
 
-test('t should return JWT token when session created', async ({ assert, client }) => {
+test('it should return JWT token when session created', async ({ assert, client }) => {
   const sessionPayload = {
     email: 'allef@gmail.com',
     password: '123456'
